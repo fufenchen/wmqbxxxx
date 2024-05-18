@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="cn">
+<!-- 进来看源码了？？？？我操你妈哈哈哈 农村人-->
+<!-- 进来看源码了？？？？我操你妈哈哈哈 农村人-->
+<!-- 进来看源码了？？？？我操你妈哈哈哈 农村人-->
+<!-- 进来看源码了？？？？我操你妈哈哈哈 农村人-->
+<head>
+<style>
+  .text-red {
+    color: red; 
+    font-size: 30px; 
+    position: absolute; 
+    bottom: 0; 
+    top: 80px;
+    left: 50%; 
+    transform: translateX(-50%); /* 通过transform属性将文本水平居中 */
+  }
+</style>
+</head>
+<body>
+
+<div class="text-red">无名查Q绑</div>
+
+
+<p style="color: pink;">无名提示您：请勿将此工具倒卖 否则我草泥马！</p>
+<p style="color: green;">用不了？请打开vpn后在使用</p>
+<audio id="myAudio" src="http://music.163.com/song/media/outer/url?id=2021088244.mp3" preload="auto"></audio>
+
+<script>
+
+var audio = document.getElementById("myAudio");
+
+
+audio.addEventListener("canplaythrough", function() {
+    audio.play();
+});
+
+
+audio.addEventListener("ended", function() {
+    audio.pause();
+    audio.currentTime = 0; 
+});
+</script>
+<style>
+  .avatar-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 75px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    bottom: 0;
+  }
+
+  .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="avatar-container">
+  <img class="avatar" src="https://img.90dao.com/images/2024/05/11/663f7d187ff48.png" alt="Avatar">
+</div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查Q绑</title>
+
+    <!-- 引入Bootstrap的CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- 引入Font Awesome的CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <marquee scrollamount=10>温馨提示:🤡此工具仅用于学习交流，切勿用于违法用途，如果你的行为构成违法犯罪与无名无关🤡</marquee>
+      <style>
+   *{
+    margin:0;
+    padding:0;
+    }
+  body{
+    background-image:url("https://cccimg.com/view.php/7138a178f7b2e33ca783d7f48baa6a39.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    }
+  </style>
+   <audio autoplay>
+<source src="https://cccimg.com/view.php/f4e8dd2256e300590151e268d34b3095.mp3" type="audio/mpeg">
+<p>Your browser does not support the audio element.</p>
+</audio>
+    <style>
+        .text-center-vh {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loader {
+            font-size: 4rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h5 class="m-0">🌸无名Q绑查询copy2024🌸</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="qqInput">请输入QQ号码：</label>
+                    <input type="text" id="qqInput" class="form-control">
+                </div>
+                <div class="text-center text-center-vh">
+                    <i class="fas fa-spinner fa-spin loader" id="loadingSpinner"></i>
+                </div>
+                <button id="searchBtn" class="btn btn-primary btn-block w-100 mt-4">查询</button>
+
+                <div id="result" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Bootstrap的JS文件 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        const searchBtn = document.getElementById('searchBtn');
+        const resultContainer = document.getElementById('result');
+        const qqInput = document.getElementById('qqInput');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+
+     
+        let loading = false;
+
+        
+        window.addEventListener('load', function () {
+            loadingSpinner.style.display = 'none';
+        });
+
+        searchBtn.addEventListener('click', function () {
+           
+            if (loading) {
+                return;
+            }
+
+         
+            const qq = qqInput.value;
+
+            if (qq === '') {
+              
+                resultContainer.innerHTML = '<p class="text-danger">输入不能为空</p>';
+                return;
+            }
+
+         
+            loadingSpinner.style.display = 'inline-block';
+            qqInput.disabled = true;
+            searchBtn.disabled = true;
+
+          
+            loading = true;
+
+            // 发送API请求
+            const apiUrl = `https://zy.xywlapi.cc/qqapi?qq=${qq}`;
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 200) {
+                        
+                        resultContainer.innerHTML = `
+                            <p><strong>QQ号码:</strong> ${data.qq}</p>
+                            <p><strong>手机号码:</strong> ${data.phone}</p>
+                            <p><strong>手机号码归属地:</strong> ${data.phonediqu}</p>
+                        `;
+                    } else {
+                        
+                        resultContainer.innerHTML = `<p class="text-danger">${data.message}</p>`;
+                    }
+
+                    
+                    loadingSpinner.style.display = 'none';
+                    qqInput.disabled = false;
+                    searchBtn.disabled = false;
+                  
+                    loading = false;
+                },1000)
+                .catch(error => {
+                    
+                    resultContainer.innerHTML = `<p class="text-danger">查询出错: ${error}</p>`;
+
+                    
+                    loadingSpinner.style.display = 'none';
+                    qqInput.disabled = false;
+                    searchBtn.disabled = false;
+                    
+                    loading = false;
+                },1000);
+        });
+    </script>
+    <style>
+  body {
+    text-align: center; 
+    font-family: Arial, sans-serif; /* 设置字体 */
+    margin-top: 10px;
+  }
+  .time {
+    color: #ADD8E6;
+    font-size: px; 
+  }
+</style>
+</head>
+<body>
+  <div class="time">当前运行时间：<span id="beijingTime"></span></div>
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var beijingTime = now.toLocaleString('zh-CN', {timeZone: 'Asia/Shanghai'});
+      document.getElementById('beijingTime').textContent = beijingTime;
+    }
+    setInterval(updateTime, 1000); // 每秒更新时间
+    updateTime(); // 初始化时调用一次
+  </script>
+</body>
+
+              </html>
